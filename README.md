@@ -4,6 +4,11 @@
 Information gathering starts at 12:00.
 Database dump occurs at 00:00.
 
+
+## Installation
+
+Python3 must be already installed
+
 ```shell
 
 python -m venv venv
