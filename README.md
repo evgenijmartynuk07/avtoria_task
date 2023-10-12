@@ -1,5 +1,9 @@
 # avtoria_task
 
+
+Information gathering starts at 12:00.
+Database dump occurs at 00:00.
+
 ```shell
 
 python -m venv venv
