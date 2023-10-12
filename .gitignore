@@ -1,0 +1,10 @@
+# created by virtualenv automatically
+
+lib
+tmp
+include
+.idea
+bin
+celerybeat-schedule
+.env
+**__pycache__/
