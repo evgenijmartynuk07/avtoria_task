@@ -4,7 +4,7 @@ import psycopg2
 from psycopg2 import sql
 from car_parser.celeryconfig import app
 from car_parser.parse import CollectCar
-from config import DB_NAME, POSTGRES_USER
+from config import POSTGRES_USER, POSTGRES_DB
 
 
 @app.task
@@ -13,13 +13,13 @@ def start_collect() -> None:
     asyncio.run(client.start_collect_links())
 
 
-dump_dir = "../dumps"
+dump_dir = "dumps"
 os.makedirs(dump_dir, exist_ok=True)
 
 
 @app.task
 def dump_db() -> None:
-    db_name = DB_NAME
+    db_name = POSTGRES_DB
     db_user = POSTGRES_USER
     output_file = os.path.join(dump_dir, f"db_dump_{db_name}.sql")
 
